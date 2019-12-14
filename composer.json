@@ -9,7 +9,13 @@
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "container_example"
+			"extension-key": "container_example",
+			"web-dir": ".Build/Web"
 		}
+	},
+	"scripts": {
+		"post-autoload-dump": [
+			"TYPO3\\TestingFramework\\Composer\\ExtensionTestEnvironment::prepare"
+		]
 	}
 }
