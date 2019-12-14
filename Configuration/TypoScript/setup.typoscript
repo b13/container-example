@@ -1,0 +1,22 @@
+tt_content.2cols-with-header-container < lib.contentElement
+tt_content.2cols-with-header-container {
+  templateName = 2ColsWithHeader
+  templateRootPaths.10 = EXT:container_example/Resources/Private/Templates
+  dataProcessing {
+    200 = B13\Container\DataProcessing\ContainerProcessor
+    200 {
+      colPos = 200
+      as = childsHeader
+    }
+    201 = B13\Container\DataProcessing\ContainerProcessor
+    201 {
+      colPos = 201
+      as = childsLeft
+    }
+    202 = B13\Container\DataProcessing\ContainerProcessor
+    202 {
+     colPos = 202
+     as = childsRight
+    }
+  }
+}

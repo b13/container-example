@@ -1,0 +1,15 @@
+{
+    "name": "b13/container-example",
+    "description": "Example for EXT:container",
+    "require": {
+        "b13/container": "*"
+    },
+	"replace": {
+		"container_example": "self.version"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "container_example"
+		}
+	}
+}
