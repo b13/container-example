@@ -1,6 +1,6 @@
 <?php
 
-\B13\Container\TcaRegistry::registerContainer(
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->registerContainer(
     'b13-2cols-with-header-container',
     '2 Column Container With Header',
     'Some Description of the Container',
