@@ -1,16 +1,33 @@
 
+<h1>{data.header}</h1>
 
 <h2>header (200)</h2>
-<f:for each="{childsHeader}" as="child">
-    <f:format.raw>{child.renderedContent}</f:format.raw>
-</f:for>
+<f:if condition="{childsHeader}">
+    <div class="header-childs">
+        <f:for each="{childsHeader}" as="child">
+            <h6>{child.header}</h6>
+            <f:format.raw>{child.renderedContent}</f:format.raw>
+        </f:for>
+    </div>
+</f:if>
 
 <h2>left side (201)</h2>
-<f:for each="{childsLeft}" as="child">
-    <f:format.raw>{child.renderedContent}</f:format.raw>
-</f:for>
+<f:if condition="{childsLeft}">
+    <div class="left-childs">
+        <f:for each="{childsLeft}" as="child">
+            <h6>{child.header}</h6>
+            <f:format.raw>{child.renderedContent}</f:format.raw>
+        </f:for>
+
+    </div>
+</f:if>
 
 <h2>right side (202)</h2>
-<f:for each="{childsRight}" as="child">
-    <f:format.raw>{child.renderedContent}</f:format.raw>
-</f:for>
+<f:if condition="{childsRight}">
+    <div class="right-childs">
+        <f:for each="{childsRight}" as="child">
+            <h6>{child.header}</h6>
+            <f:format.raw>{child.renderedContent}</f:format.raw>
+        </f:for>
+    </div>
+</f:if>
