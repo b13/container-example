@@ -7,7 +7,7 @@
     'container_example',
     [
         [
-            ['name' => 'header', 'colPos' => 200, 'colspan' => 2]
+            ['name' => 'header', 'colPos' => 200, 'colspan' => 2, 'allowed' => ['CType' => 'header, textmedia']]
         ],
         [
             ['name' => 'left side', 'colPos' => 201],
