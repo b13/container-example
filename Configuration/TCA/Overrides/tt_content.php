@@ -4,7 +4,7 @@
     'b13-2cols-with-header-container',
     '2 Column Container With Header',
     'Some Description of the Container',
-    'container_example',
+    'EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg',
     [
         [
             ['name' => 'header', 'colPos' => 200, 'colspan' => 2, 'allowed' => ['CType' => 'header, textmedia']]
