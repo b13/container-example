@@ -1,6 +1,7 @@
 {
     "name": "b13/container-example",
     "description": "Example for EXT:container",
+    "type": "typo3-cms-extension",
     "require": {
         "b13/container": "*"
     },
