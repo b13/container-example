@@ -6,17 +6,17 @@ tt_content.b13-2cols-with-header-container {
     200 = B13\Container\DataProcessing\ContainerProcessor
     200 {
       colPos = 200
-      as = childsHeader
+      as = childrenHeader
     }
     201 = B13\Container\DataProcessing\ContainerProcessor
     201 {
       colPos = 201
-      as = childsLeft
+      as = childrenLeft
     }
     202 = B13\Container\DataProcessing\ContainerProcessor
     202 {
      colPos = 202
-     as = childsRight
+     as = childrenRight
     }
   }
 }
