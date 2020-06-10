@@ -2,11 +2,13 @@
     "name": "b13/container-example",
     "description": "Example for EXT:container",
     "type": "typo3-cms-extension",
+    "homepage": "https://b13.com",
+    "license": ["GPL-2.0-or-later"],
     "require": {
-        "b13/container": "*"
+        "b13/container": "^1.0.0"
     },
     "replace": {
-        "container_example": "self.version"
+        "typo3-ter/container_example": "self.version"
     },
     "extra": {
         "typo3/cms": {
