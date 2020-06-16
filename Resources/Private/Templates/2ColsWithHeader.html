@@ -1,33 +1,40 @@
+<style>
 
-<h1 class="container">{data.header}</h1>
-
-<h2>header (200)</h2>
-<f:if condition="{childrenHeader}">
-    <div class="header-children">
-        <f:for each="{childrenHeader}" as="child">
-            <h6 class="header-children">{child.header}</h6>
-            <f:format.raw>{child.renderedContent}</f:format.raw>
-        </f:for>
-    </div>
+.container-example-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+</style>
+<f:if condition="{data.header}">
+    <h1 class="container">{data.header}</h1>
 </f:if>
-
-<h2>left side (201)</h2>
-<f:if condition="{childrenLeft}">
-    <div class="left-children">
-        <f:for each="{childrenLeft}" as="child">
-            <h6 class="left-children">{child.header}</h6>
-            <f:format.raw>{child.renderedContent}</f:format.raw>
-        </f:for>
-
-    </div>
-</f:if>
-
-<h2>right side (202)</h2>
-<f:if condition="{childrenRight}">
-    <div class="right-children">
-        <f:for each="{childrenRight}" as="child">
-            <h6 class="right-children">{child.header}</h6>
-            <f:format.raw>{child.renderedContent}</f:format.raw>
-        </f:for>
-    </div>
-</f:if>
+<div class="container-example-container">
+    <f:if condition="{childrenHeader}">
+        <div class="header-children">
+            <h2>header (200)</h2>
+            <f:for each="{childrenHeader}" as="child">
+                <h6 class="header-children">{child.header}</h6>
+                <f:format.raw>{child.renderedContent}</f:format.raw>
+            </f:for>
+        </div>
+    </f:if>
+    <f:if condition="{childrenLeft}">
+        <div class="left-children">
+            <h2>left side (201)</h2>
+            <f:for each="{childrenLeft}" as="child">
+                <h6 class="left-children">{child.header}</h6>
+                <f:format.raw>{child.renderedContent}</f:format.raw>
+            </f:for>
+        </div>
+    </f:if>
+    <f:if condition="{childrenRight}">
+        <div class="right-children">
+            <h2>right side (202)</h2>
+            <f:for each="{childrenRight}" as="child">
+                <h6 class="right-children">{child.header}</h6>
+                <f:format.raw>{child.renderedContent}</f:format.raw>
+            </f:for>
+        </div>
+    </f:if>
+</div>
