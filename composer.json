@@ -7,9 +7,6 @@
     "require": {
         "b13/container": "^1.0.0"
     },
-    "replace": {
-        "typo3-ter/container_example": "self.version"
-    },
     "extra": {
         "typo3/cms": {
             "extension-key": "container_example"
