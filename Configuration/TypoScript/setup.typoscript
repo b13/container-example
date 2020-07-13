@@ -1,3 +1,4 @@
+// explicitly set colPos/variable values
 tt_content.b13-2cols-with-header-container < lib.contentElement
 tt_content.b13-2cols-with-header-container {
   templateName = 2ColsWithHeader
@@ -18,5 +19,16 @@ tt_content.b13-2cols-with-header-container {
      colPos = 202
      as = childrenRight
     }
+  }
+}
+
+// use default/general ContainerProcessor
+tt_content.b13-2cols-with-header-container >
+tt_content.b13-2cols-with-header-container < lib.contentElement
+tt_content.b13-2cols-with-header-container {
+  templateName = 2ColsWithHeaderGeneral
+  templateRootPaths.10 = EXT:container_example/Resources/Private/Templates
+  dataProcessing {
+    200 = B13\Container\DataProcessing\ContainerProcessor
   }
 }
