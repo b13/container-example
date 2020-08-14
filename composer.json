@@ -5,7 +5,7 @@
     "homepage": "https://b13.com",
     "license": ["GPL-2.0-or-later"],
     "require": {
-        "b13/container": "^1.0.0"
+        "b13/container": "*"
     },
     "extra": {
         "typo3/cms": {
