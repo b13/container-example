@@ -7,6 +7,11 @@
     "require": {
         "b13/container": "*"
     },
+    "autoload": {
+        "psr-4": {
+            "B13\\ContainerExample\\": "Classes/"
+        }
+    },
     "extra": {
         "typo3/cms": {
             "extension-key": "container_example"
