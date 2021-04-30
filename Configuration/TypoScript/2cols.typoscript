@@ -11,8 +11,8 @@ tt_content.b13-2cols {
 	  dataProcessing.20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
 	  dataProcessing.20 {
 		  references.table = tt_content
-		  references.fieldName = image
-		  as = images
+		  references.fieldName = media
+		  as = uploads
 	  }
     }
   }
