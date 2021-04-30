@@ -1,7 +1,10 @@
 <f:if condition="{childrenLeft}">
     <div class="left-children">
         <f:for each="{childrenLeft}" as="child">
-            {child.my_mod_header}
+            {child.data.my_mod_header}
+            <f:for each="{child.uploads}" as="upload">
+                {upload.identifier}
+            </f:for>
         </f:for>
     </div>
 </f:if>
