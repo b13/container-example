@@ -26,7 +26,7 @@ class MyModHeaderProcessor implements DataProcessorInterface
      */
     public function process(ContentObjectRenderer $cObj, array $contentObjectConfiguration, array $processorConfiguration, array $processedData): array
     {
-        $processedData['data']['my_mod_header'] = 'my-mod-header-' . $processedData['data']['header'];
+        $processedData['data']['my_mod_header'] = 'my-mod-header:' . $cObj->data['header'];
         return $processedData;
     }
 }
