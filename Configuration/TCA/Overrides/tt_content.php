@@ -41,3 +41,19 @@ $GLOBALS['TCA']['tt_content']['types']['b13-2cols-with-header-container']['showi
         )
     )
 );
+
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+    (
+    new \B13\Container\Tca\ContainerConfiguration(
+        'b13-2-8-2-container', // CType
+        '2-8-2 container', // label
+        '2-8-2 container', // description
+        [
+            [
+                ['name' => 'content', 'colPos' => 200]
+            ]
+        ] // grid configuration
+    )
+    )
+    ->setGridTemplate('EXT:container_example/Resources/Private/Templates/Backend/2-8-2-grid.html')
+);
