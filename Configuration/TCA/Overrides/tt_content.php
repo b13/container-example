@@ -8,11 +8,11 @@
             'Some Description of the Container', // description
             [
                 [
-                    ['name' => 'header', 'colPos' => 200, 'colspan' => 2, 'allowed' => ['CType' => 'header, textmedia']]
+                    ['name' => 'header', 'colPos' => 200, 'colspan' => 2, 'allowed' => ['CType' => 'header, textmedia, b13-2cols']]
                 ],
                 [
                     ['name' => 'left side', 'colPos' => 201],
-                    ['name' => 'right side', 'colPos' => 202]
+                    ['name' => 'right side', 'colPos' => 202, 'maxitems' => 1]
                 ]
             ] // grid configuration
         )
