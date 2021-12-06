@@ -1,5 +1,6 @@
 <?php
 
+$GLOBALS['TCA']['tt_content']['columns']['CType']['config']['itemGroups']['foo'] = 'LLL:EXT:container_example/Resources/Private/Language/locallang.xlf:foo';
 \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
     (
         new \B13\Container\Tca\ContainerConfiguration(
@@ -20,6 +21,7 @@
     // override default configurations
     ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
     ->setSaveAndCloseInNewContentElementWizard(false)
+    ->setGroup('foo')
 );
 
 // override default settings
