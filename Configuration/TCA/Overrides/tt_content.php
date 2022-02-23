@@ -40,4 +40,7 @@ $GLOBALS['TCA']['tt_content']['types']['b13-2cols-with-header-container']['showi
             ] // grid configuration
         )
     )
+        ->addGridLayoutPath('EXT:backendpreviews/Resources/Private/Layouts/')
+        ->addGridPartialPath('EXT:backendpreviews/Resources/Private/Partials/')
+        ->setGridTemplate('EXT:container_example/Resources/Private/Templates/Grid.html')
 );
