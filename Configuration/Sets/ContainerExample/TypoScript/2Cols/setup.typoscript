@@ -1,0 +1,19 @@
+tt_content.b13-2cols < lib.contentElement
+tt_content.b13-2cols {
+  templateName = 2Cols
+  templateRootPaths.10 = EXT:container_example/Resources/Private/Templates
+  dataProcessing {
+    200 = B13\Container\DataProcessing\ContainerProcessor
+    200 {
+      colPos = 200
+      as = childrenLeft
+	  dataProcessing.10 = B13\ContainerExample\DataProcessing\MyModHeaderProcessor
+	  dataProcessing.20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+	  dataProcessing.20 {
+		  references.table = tt_content
+		  references.fieldName = media
+		  as = uploads
+	  }
+    }
+  }
+}
