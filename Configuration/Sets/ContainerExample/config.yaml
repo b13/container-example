@@ -1,0 +1,4 @@
+name: b13/container-example
+label: Container Example
+dependencies:
+  - typo3/fluid-styled-content

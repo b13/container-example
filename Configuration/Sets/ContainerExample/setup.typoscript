@@ -1,0 +1,2 @@
+@import './TypoScript/2Cols/setup.typoscript'
+@import './TypoScript/2ColsWithHeader/setup.typoscript'
