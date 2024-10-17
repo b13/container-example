@@ -34,7 +34,7 @@ $GLOBALS['TCA']['tt_content']['types']['b13-2cols-with-header-container']['showi
             'Some Description of the Container', // description
             [
                 [
-                    ['name' => '2-cols-left', 'colPos' => 200],
+                    ['name' => '2-cols-left', 'colPos' => 200, 'maxitems' => 1],
                     ['name' => '2-cols-right', 'colPos' => 201, 'allowed' => ['CType' => 'header']]
                 ]
             ] // grid configuration
