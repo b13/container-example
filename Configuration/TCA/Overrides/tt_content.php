@@ -39,5 +39,5 @@ $GLOBALS['TCA']['tt_content']['types']['b13-2cols-with-header-container']['showi
                 ]
             ] // grid configuration
         )
-    )
+    )->setBackendTemplate('EXT:container_example/Resources/Private/Templates/BackendTemplate.html')
 );
