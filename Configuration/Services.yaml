@@ -1,0 +1,17 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  B13\ContainerExample\:
+    resource: '../Classes/*'
+
+  B13\ContainerExample\Listener\BeforeContainerConfigurationIsApplied:
+    tags:
+      - name: event.listener
+        identifier: 'tx-container-example-BeforeContainerConfigurationIsApplied'
+  B13\ContainerExample\Listener\BeforeContainerPreviewIsRendered:
+    tags:
+      - name: event.listener
+        identifier: 'tx-container-example-BeforeContainerPreviewIsRendered'
