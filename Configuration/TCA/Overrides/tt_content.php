@@ -41,3 +41,17 @@ $GLOBALS['TCA']['tt_content']['types']['b13-2cols-with-header-container']['showi
         )
     )->setBackendTemplate('EXT:container_example/Resources/Private/Templates/BackendTemplate.html')
 );
+\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+    (
+        new \B13\Container\Tca\ContainerConfiguration(
+            'b13-1col', // CType
+            '1 Column', // label
+            'Some Description of the Container', // description
+            [
+                [
+                    ['name' => 'content', 'colPos' => 200],
+                ]
+            ] // grid configuration
+        )
+    )->setRegisterInNewContentElementWizard(false)
+);
