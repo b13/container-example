@@ -20,6 +20,7 @@
     // override default configurations
     ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
     ->setSaveAndCloseInNewContentElementWizard(false)
+    ->setDefaultValues(['header' => 'my-default-value-header'])
 );
 
 // override default settings
