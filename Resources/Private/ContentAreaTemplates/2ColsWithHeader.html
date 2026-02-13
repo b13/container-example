@@ -1,0 +1,14 @@
+
+<h1 class="container">{data.header}</h1>
+
+<f:if condition="{content.200}">
+    <div class="header-children">{content.200 -> f:render.contentArea()}</div>
+</f:if>
+<f:if condition="{content.201}">
+    <f:for each="{content.201}" as="record">
+        {record -> f:render.record()}
+    </f:for>
+</f:if>
+<f:if condition="{content.202}">
+    <div class="right-children">{content.202 -> f:render.contentArea()}</div>
+</f:if>

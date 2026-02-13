@@ -1,0 +1,9 @@
+
+<f:if condition="{content.200}">
+    <f:for each="{content.200}" as="record">
+        {record.header}
+        <f:for each="{record.media}" as="media">
+            {record.media.identifier}
+        </f:for>
+    </f:for>
+</f:if>
