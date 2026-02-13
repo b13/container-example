@@ -21,7 +21,7 @@ class BeforeContainerConfigurationIsApplied
         $configuration = $e->getContainerConfiguration();
         if ($configuration->getCType() === 'b13-2cols') {
             $configuration->setDescription('mod -- ' . $configuration->getDescription());
-            $configuration->changeGridColumnConfiguration(201, ['disallowed' => ['CType' => 'uploads, image']]);
+            $configuration->changeGridColumnConfiguration(201, ['disallowedContentTypes' => 'uploads, image']);
         }
     }
 }

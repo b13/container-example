@@ -1,0 +1,12 @@
+tt_content.b13-2cols < lib.contentElement
+tt_content.b13-2cols {
+  templateName = 2Cols
+  templateRootPaths.10 = EXT:container_example/Resources/Private/ContentAreaTemplates
+  dataProcessing.10 = B13\Container\DataProcessing\ContentAreaProcessor
+}
+tt_content.b13-2cols-with-header-container < lib.contentElement
+tt_content.b13-2cols-with-header-container {
+  templateName = 2ColsWithHeader
+  templateRootPaths.10 = EXT:container_example/Resources/Private/ContentAreaTemplates
+  dataProcessing.200 = B13\Container\DataProcessing\ContentAreaProcessor
+}

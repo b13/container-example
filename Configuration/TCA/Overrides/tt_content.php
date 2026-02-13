@@ -1,14 +1,24 @@
 <?php
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
-    (
+call_user_func(static function () {
+
+    $typo3 = (new \TYPO3\CMS\Core\Information\Typo3Version())->getMajorVersion();
+    $restrictionKey = 'allowedContentTypes';
+    $restrictions = 'header, textmedia, b13-2cols';
+    if ($typo3 < 14) {
+        $restrictionKey = 'allowed';
+        $restrictions = ['CType' => 'header, textmedia, b13-2cols'];
+    }
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
         new \B13\Container\Tca\ContainerConfiguration(
             'b13-2cols-with-header-container', // CType
             '2 Column Container With Header', // label
             'Some Description of the Container', // description
             [
                 [
-                    ['name' => 'header', 'colPos' => 200, 'colspan' => 2, 'allowed' => ['CType' => 'header, textmedia, b13-2cols']]
+                    ['name' => 'header', 'colPos' => 200, 'colspan' => 2, $restrictionKey => $restrictions]
                 ],
                 [
                     ['name' => 'left side', 'colPos' => 201],
@@ -16,19 +26,25 @@
                 ]
             ] // grid configuration
         )
-    )
-    // override default configurations
-    ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
-    ->setSaveAndCloseInNewContentElementWizard(false)
-    ->setDefaultValues(['header' => 'my-default-value-header'])
-);
+        )
+            // override default configurations
+            ->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
+            ->setSaveAndCloseInNewContentElementWizard(false)
+            ->setDefaultValues(['header' => 'my-default-value-header'])
+    );
 
 // override default settings
-$GLOBALS['TCA']['tt_content']['types']['b13-2cols-with-header-container']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+    $GLOBALS['TCA']['tt_content']['types']['b13-2cols-with-header-container']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
 
+    $restrictionKey = 'allowedContentTypes';
+    $restrictions = 'header';
+    if ($typo3 < 14) {
+        $restrictionKey = 'allowed';
+        $restrictions = ['CType' => 'header'];
+    }
 // second container
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
-    (
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
         new \B13\Container\Tca\ContainerConfiguration(
             'b13-2cols', // CType
             '2 Column', // label
@@ -36,14 +52,14 @@ $GLOBALS['TCA']['tt_content']['types']['b13-2cols-with-header-container']['showi
             [
                 [
                     ['name' => '2-cols-left', 'colPos' => 200, 'maxitems' => 1],
-                    ['name' => '2-cols-right', 'colPos' => 201, 'allowed' => ['CType' => 'header']]
+                    ['name' => '2-cols-right', 'colPos' => 201, $restrictionKey => $restrictions]
                 ]
             ] // grid configuration
         )
-    )->setBackendTemplate('EXT:container_example/Resources/Private/Templates/BackendTemplate.html')
-);
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
-    (
+        )->setBackendTemplate('EXT:container_example/Resources/Private/Templates/BackendTemplate.html')
+    );
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
         new \B13\Container\Tca\ContainerConfiguration(
             'b13-1col', // CType
             '1 Column', // label
@@ -54,5 +70,7 @@ $GLOBALS['TCA']['tt_content']['types']['b13-2cols-with-header-container']['showi
                 ]
             ] // grid configuration
         )
-    )->setRegisterInNewContentElementWizard(false)
-);
+        )->setRegisterInNewContentElementWizard(false)
+    );
+});
+
