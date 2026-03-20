@@ -1,0 +1,6 @@
+tt_content.b13-2cols-content-area < lib.contentElement
+tt_content.b13-2cols-content-area {
+  templateName = 2ColsContentArea
+  templateRootPaths.10 = EXT:container_example/Resources/Private/Templates
+  dataProcessing.10 = B13\Container\DataProcessing\ContentAreaProcessor
+}
