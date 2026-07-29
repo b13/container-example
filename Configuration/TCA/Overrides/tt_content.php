@@ -66,7 +66,7 @@ call_user_func(static function () {
             'Some Description of the Container', // description
             [
                 [
-                    ['name' => 'content', 'colPos' => 200],
+                    ['name' => 'content', 'colPos' => 200, 'disallowedContentTypes' => 'b13-1col'],
                 ]
             ] // grid configuration
         )
